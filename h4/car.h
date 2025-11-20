@@ -1,5 +1,6 @@
 #ifndef CAR_H
 #define CAR_H
+#include <iomanip>
 
 #include <string>
 #include <iostream>
@@ -16,7 +17,14 @@ public:
 
 
     Engine getObjEngine() const;
-    void setObjEngine();
+
+
+
+    void setObjEngine() {
+        objEngine.setHorsepower(150);
+        objEngine.setDisplacement(2.0);
+    }
+
 
     void setwheels(){
         objwheel1.setSize(17);
@@ -37,7 +45,7 @@ public:
 
     void printDetails(){
         cout<<"Auto: "<<getBrand()<<" "<<getModel()<<endl;
-        cout<<"Moottori: "<<objEngine.getHorsepower()<<","<<objEngine.getDisplacement()<<endl;
+        cout<<"Moottori: "<<objEngine.getHorsepower()<<"hp, "<<(objEngine.getDisplacement())<<"L "<<endl;
         cout<<"Rengas 1: "<<objwheel1.getSize()<<","<<objwheel1.getType()<<endl;
         cout<<"Rengas 2: "<<objwheel2.getSize()<<","<<objwheel2.getType()<<endl;
         cout<<"Rengas 3: "<<objwheel3.getSize()<<","<<objwheel3.getType()<<endl;

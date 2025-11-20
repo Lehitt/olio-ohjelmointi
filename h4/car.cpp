@@ -4,11 +4,8 @@ car::car() {}
 
 
 
-Engine car::getObjEngine() const { return objEngine; }
-
-void car::setObjEngine() {
-    objEngine.setHorsepower(150);
-    objEngine.setDisplacement(2.0);
+Engine car::getObjEngine() const {
+    return objEngine;
 }
 
 car::car(string b, string m) {
